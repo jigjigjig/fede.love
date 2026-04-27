@@ -145,12 +145,10 @@ const Portfolio = () => {
           <SpinnerSection sequenceIndex={0} title="" reducedMotion={reducedMotion}>
             <div className="space-y-3 text-foreground leading-relaxed">
               <p>
-                My name is Federico Cattaneo. I’m a product manager based in
-                Europe, currently working at Studocu.
+                Hey, I'm Federico. 
               </p>
               <p className="text-muted-foreground">
-                I like shaping software with care, curiosity, and a bias for
-                making complex things feel simple.
+              Living in Amsterdam, working as product manager at Studocu. 
               </p>
             </div>
           </SpinnerSection>
