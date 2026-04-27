@@ -68,18 +68,22 @@ function SpinnerSection({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex items-baseline gap-3 mb-3">
-        <span style={glyphBoxStyle}>
-          {hovered &&
-            (reducedMotion ? (
-              <StaticGlyph sequence={sequence} />
-            ) : (
-              <SingleSpinner sequence={sequence} infinite />
-            ))}
-        </span>
-        <span className="text-muted-foreground text-[13px]">{title}</span>
+      {title && (
+        <div className="flex items-baseline gap-3 mb-3">
+          <span style={glyphBoxStyle}>
+            {hovered &&
+              (reducedMotion ? (
+                <StaticGlyph sequence={sequence} />
+              ) : (
+                <SingleSpinner sequence={sequence} infinite />
+              ))}
+          </span>
+          <span className="text-muted-foreground text-[13px]">{title}</span>
+        </div>
+      )}
+      <div className={title ? "space-y-1 pl-[calc(1ch+0.75rem)]" : "space-y-1"}>
+        {children}
       </div>
-      <div className="space-y-1 pl-[calc(1ch+0.75rem)]">{children}</div>
     </section>
   );
 }
@@ -138,7 +142,7 @@ const Portfolio = () => {
 
       {booted && (
         <div className="space-y-14 animate-fade-in">
-          <SpinnerSection sequenceIndex={0} title="intro" reducedMotion={reducedMotion}>
+          <SpinnerSection sequenceIndex={0} title="" reducedMotion={reducedMotion}>
             <div className="space-y-3 text-foreground leading-relaxed">
               <p>
                 My name is Federico Cattaneo. I’m a product manager based in
