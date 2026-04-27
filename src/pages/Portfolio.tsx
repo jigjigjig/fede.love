@@ -81,7 +81,7 @@ function SpinnerSection({
           <span className="text-muted-foreground text-[13px]">{title}</span>
         </div>
       )}
-      <div className={title ? "space-y-1 pl-[calc(1ch+0.75rem)]" : "space-y-1"}>
+      <div className="space-y-1 pl-[calc(1ch+0.75rem)]">
         {children}
       </div>
     </section>
@@ -133,7 +133,7 @@ const Portfolio = () => {
   }, [reducedMotion]);
 
   return (
-    <div className="min-h-screen px-6 py-20 sm:px-12 md:px-24 lg:px-32 max-w-[640px]">
+    <div className="min-h-screen max-w-[640px] box-content px-6 py-20 sm:px-12 md:px-24 lg:px-32">
       {!booted && (
         <div className="fixed inset-0 flex items-center justify-center">
           <AsciiSpinnerGroup onComplete={handleBootComplete} size={20} />

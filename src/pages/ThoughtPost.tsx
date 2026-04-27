@@ -8,7 +8,7 @@ const ThoughtPost = () => {
 
   if (!thought) {
     return (
-      <div className="min-h-screen px-6 py-20 sm:px-12 md:px-24 lg:px-32 max-w-[640px]">
+      <div className="min-h-screen max-w-[640px] box-content px-6 py-20 sm:px-12 md:px-24 lg:px-32">
         <Link
           to="/"
           className="text-muted-foreground hover:text-accent hover-glow"
@@ -21,7 +21,7 @@ const ThoughtPost = () => {
   }
 
   return (
-    <div className="min-h-screen px-6 py-20 sm:px-12 md:px-24 lg:px-32 max-w-[640px] animate-fade-in">
+    <div className="min-h-screen max-w-[640px] box-content px-6 py-20 sm:px-12 md:px-24 lg:px-32 animate-fade-in">
       <Link
         to="/"
         className="text-muted-foreground hover:text-accent hover-glow"
