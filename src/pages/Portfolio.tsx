@@ -8,13 +8,6 @@ import {
 import { getAllThoughts } from "../lib/thoughts";
 import { getAllReads } from "../lib/reads";
 
-const projects = [
-  { label: "project-alpha", href: "#" },
-  { label: "typewriter.js", href: "#" },
-  { label: "dotfiles", href: "#" },
-  { label: "ascii-limit-lab", href: "#/ascii-lab" },
-];
-
 const thoughts = getAllThoughts();
 const reads = getAllReads();
 
@@ -145,22 +138,17 @@ const Portfolio = () => {
 
       {booted && (
         <div className="space-y-14 animate-fade-in">
-          <SpinnerSection
-            sequenceIndex={0}
-            title="projects"
-            reducedMotion={reducedMotion}
-          >
-            {projects.map((p) => (
-              <a
-                key={p.label}
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-foreground hover:text-accent hover-glow"
-              >
-                {p.label}
-              </a>
-            ))}
+          <SpinnerSection sequenceIndex={0} title="intro" reducedMotion={reducedMotion}>
+            <div className="space-y-3 text-foreground leading-relaxed">
+              <p>
+                My name is Federico Cattaneo. I’m a product manager based in
+                Europe, currently working at Studocu.
+              </p>
+              <p className="text-muted-foreground">
+                I like shaping software with care, curiosity, and a bias for
+                making complex things feel simple.
+              </p>
+            </div>
           </SpinnerSection>
 
           <SpinnerSection
@@ -220,6 +208,12 @@ const Portfolio = () => {
                 className="text-foreground hover:text-accent hover-glow"
               >
                 email
+              </a>
+              <a
+                href="#/ascii-lab"
+                className="text-foreground hover:text-accent hover-glow"
+              >
+                ascii-lab
               </a>
             </div>
           </SpinnerSection>
