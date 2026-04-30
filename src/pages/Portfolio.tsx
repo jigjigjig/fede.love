@@ -10,6 +10,7 @@ import { getAllReads } from "../lib/reads";
 
 const thoughts = getAllThoughts();
 const reads = getAllReads();
+const EMAIL_ADDRESS = "cattaneofederico@protonmail.com";
 
 let hasBooted = false;
 
@@ -118,11 +119,33 @@ function FooterSpinnerItem({
 
 const Portfolio = () => {
   const [booted, setBooted] = useState(hasBooted);
+  const [emailCopied, setEmailCopied] = useState(false);
   const reducedMotion = useReducedMotion();
 
   const handleBootComplete = useCallback(() => {
     hasBooted = true;
     setBooted(true);
+  }, []);
+
+  const handleEmailCopy = useCallback(async () => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(EMAIL_ADDRESS);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = EMAIL_ADDRESS;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "absolute";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+      setEmailCopied(true);
+    } catch {
+      setEmailCopied(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -131,6 +154,12 @@ const Portfolio = () => {
       setBooted(true);
     }
   }, [reducedMotion]);
+
+  useEffect(() => {
+    if (!emailCopied) return;
+    const timerId = window.setTimeout(() => setEmailCopied(false), 2000);
+    return () => window.clearTimeout(timerId);
+  }, [emailCopied]);
 
   return (
     <div className="min-h-screen max-w-[640px] box-content px-6 py-20 sm:px-12 md:px-24 lg:px-32">
@@ -194,29 +223,28 @@ const Portfolio = () => {
           >
             <div className="space-x-4">
               <a
-                href="#"
+                href="https://github.com/jigjigjig"
+                target="_blank"
+                rel="noreferrer"
                 className="text-foreground hover:text-accent hover-glow"
               >
                 github
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/cattaneof/"
+                target="_blank"
+                rel="noreferrer"
                 className="text-foreground hover:text-accent hover-glow"
               >
-                twitter
+                linkedin
               </a>
-              <a
-                href="#"
+              <button
+                type="button"
+                onClick={handleEmailCopy}
                 className="text-foreground hover:text-accent hover-glow"
               >
-                email
-              </a>
-              <a
-                href="#/ascii-lab"
-                className="text-foreground hover:text-accent hover-glow"
-              >
-                ascii-lab
-              </a>
+                {emailCopied ? "copied" : "email"}
+              </button>
             </div>
           </SpinnerSection>
 
