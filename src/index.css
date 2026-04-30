@@ -45,6 +45,11 @@
 }
 
 @layer components {
+  .min-h-viewport {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
   .prose {
     color: hsl(var(--foreground));
     line-height: 1.7;
