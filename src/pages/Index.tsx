@@ -709,7 +709,7 @@ const Index = () => {
   const isEffectActive = (key: EffectKey) => effects[key] && !reducedMotion;
 
   return (
-    <div className="ascii-demo-shell relative min-h-screen overflow-hidden">
+    <div className="ascii-demo-shell relative min-h-viewport overflow-hidden">
       <div className="crt-overlay" aria-hidden />
 
       {!bootComplete && (
