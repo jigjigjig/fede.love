@@ -177,7 +177,7 @@ const Portfolio = () => {
                 Hey, I'm Federico. 
               </p>
               <p className="text-muted-foreground">
-              Living in Amsterdam, working as product manager at Studocu. 
+              Living in Amsterdam, working as design engineer at Mozilla AI. 
               </p>
             </div>
           </SpinnerSection>

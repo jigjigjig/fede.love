@@ -1,5 +1,3 @@
-- Designing Data-Intensive Applications | reading
-- A Philosophy of Software Design | 2025-02
-- The Pragmatic Programmer | 2024-12
-- Ciao | 2024-12
-
+- Is a River Alive? | reading
+- The Agony of Eros | 2026-07
+- In the Land of the Cyclops | 2026-06
