@@ -177,7 +177,16 @@ const Portfolio = () => {
                 Hey, I'm Federico. 
               </p>
               <p className="text-muted-foreground">
-              Living in Amsterdam, working as design engineer at Mozilla AI. 
+              Living in Amsterdam, working as design engineer at{" "}
+              <a
+                href="https://www.mozilla.ai/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-foreground hover:text-accent hover-glow"
+              >
+                Mozilla AI
+              </a>
+              . 
               </p>
             </div>
           </SpinnerSection>
