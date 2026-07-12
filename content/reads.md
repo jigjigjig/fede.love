@@ -1,3 +1,6 @@
 - Is a River Alive? | reading
+- Jusine | reading
+- Airless spaces | 2026-07
+- Platone l'anima | 2026-07
 - The Agony of Eros | 2026-07
 - In the Land of the Cyclops | 2026-06
