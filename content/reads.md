@@ -1,5 +1,6 @@
-- Is a River Alive? | reading
-- Jusine | reading
+- Justine | reading
+- Beauty and Sadness | reading
+- Is a River Alive? | 2026-07
 - Airless spaces | 2026-07
 - Platone l'anima | 2026-07
 - The Agony of Eros | 2026-07
