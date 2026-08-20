@@ -1,7 +1,8 @@
 - Justine | reading
-- Beauty and Sadness | reading
+- Having Spent Life Seeking | reading
+- Beauty and Sadness | 2026-08
 - Is a River Alive? | 2026-07
-- Airless spaces | 2026-07
-- Platone l'anima | 2026-07
+- Airless Spaces | 2026-07
+- Platone L'anima | 2026-07
 - The Agony of Eros | 2026-07
 - In the Land of the Cyclops | 2026-06
