@@ -1,5 +1,7 @@
 - Justine | reading
-- Having Spent Life Seeking | reading
+- The Will to Change | reading
+- My Struggle Pt. 1 | reading
+- Having Spent Life Seeking | 2026-08
 - Beauty and Sadness | 2026-08
 - Is a River Alive? | 2026-07
 - Airless Spaces | 2026-07
